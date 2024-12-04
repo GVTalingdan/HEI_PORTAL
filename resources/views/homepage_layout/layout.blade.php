@@ -23,8 +23,8 @@
                     <div class="image-logo">
                         <img src="images/uf_logo.png" alt="">
                     </div>
-                    <div class="sidebar-logo" >
-                        <p >HEI PORTAL
+                    <div class="sidebar-logo">
+                        <p>HEI PORTAL
                         </p>
                     </div>
                 </div>
@@ -43,11 +43,17 @@
                             data-bs-toggle="collapse" aria-expanded="false"><i class="bi bi-tablet"></i></i>
                             TES
                         </a>
+                        {{-- dito nakalagay yung process ng modal --}}
                         <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
-                                <a href="#" class="sidebar-link">Manage TES Applicants</a>
+
+                                <a href="#" class="sidebar-link"data-bs-toggle="modal" data-bs-target="#myModal">
+                                    Manage TES Applicants</a>
                             </li>
+                            {{-- hanggang dito  --}}
+                            {{-- tapos yung mismong code ng modal ba baba ng </main> --}}
                             <li class="sidebar-item">
+
                                 <a href="#" class="sidebar-link">Generate Billing Details</a>
                             </li>
                         </ul>
@@ -115,7 +121,7 @@
                 <div class="navbar-collapse navbar">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
-                            <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0" >
+                            <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
                                 <img src="images/uf_logo.png" class="avatar img-fluid rounded" alt="">
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
@@ -218,17 +224,47 @@
 
                 </div> --}}
             </main>
-            <a href="#" class="theme-toggle">
+            <!-- Button to trigger the modal -->
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="modal-body-content">
+                                <label>Academic Year</label>
+                                <select class="sidebar-dropdown list-unstyled collapse show" name="ac_year"></select>
+
+                                <label>Semester</label>
+                                <select class="sidebar-dropdown list-unstyled collapse show" name="semester"></select>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            {{-- <a href="#" class="theme-toggle">
                 <i class="bi bi-moon"></i>
                 <i class="bi bi-brightness-high"> </i>
             </a>
             <footer class="footer">
                 <div class="container-fluid">
-                    <div class="row text-muted">
-                        <div class="col-6 text-start">
+                    <div class="row text-muted"> --}}
+            {{-- <div class="col-6 text-start">
                             <p class="mb-0">
                                 <a href="#" class="text-muted">
-                                    <strong>HEI PORTAL</strong>
+                                    <strong></strong>
                                 </a>
                             </p>
                         </div>
@@ -239,16 +275,17 @@
                                 </li>
                                 <li class="list-inline-item">
                                     <a href="#" class="text-muted">About Us</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+                                </li> --}}
+            </ul>
         </div>
+    </div>
+    </div>
+    </footer>
+    </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 
 </html>
